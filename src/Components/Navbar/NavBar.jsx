@@ -39,7 +39,7 @@ const NavBar = () => {
 
         {/* Mobile Menu Toggle */}
         <button className="block md:hidden ml-auto" onClick={handleClick}>
-          <IoMenuSharp className="text-white h-5" />
+          <IoMenuSharp className="text-white h-12 w-6" />
         </button>
       </nav>
 
