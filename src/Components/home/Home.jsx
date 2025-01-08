@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import sd from "../../assets/sd.JPG";
+import img2 from "../../assets/img2.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="text-white text-center py-44 md:flex-col">
       <img
-        src={sd}
+        src={img2}
         alt="Profile"
         className="mx-auto mb-8 w-56 h-56 rounded-full object-cover "
         data-aos="flip-right"
