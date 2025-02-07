@@ -8,6 +8,7 @@ import css3 from "../../assets/css3.svg";
 import js from "../../assets/js.png";
 import react from "../../assets/react.png";
 import twcss from "../../assets/twcss.png";
+import git from "../../assets/git.png";
 
 const Skills = () => {
   // Initialize AOS for animations
@@ -47,6 +48,12 @@ const Skills = () => {
       borderColor: "border-blue-400",
       shadowColor: "shadow-blue-400/75",
     },
+    {
+      image: git,
+      label: "GITHUB",
+      borderColor: "border-black",
+      shadowColor: "shadow-gray-300",
+    },
   ];
 
   return (
@@ -55,14 +62,14 @@ const Skills = () => {
         <h2 className="text-4xl font-bold text-center mb-12 font-head">
           Skills
         </h2>
-        <div className="container grid grid-cols-1 md:grid-cols-3">
+        <div className="container grid grid-cols-2 md:grid-cols-3 gap-6">
           {skills.map(({ image, label, borderColor, shadowColor }, index) => (
             <div
               key={index}
-              className={`mx-auto px-9 py-6 border-b-2 border-r-2 ${borderColor} shadow-lg ${shadowColor} rounded-md mt-9`}
+              className={`mx-auto px-9 py-6 border-b-2 border-r-2 ${borderColor} shadow-lg ${shadowColor} rounded-md mt-9 hover:scale-105 transition-transform duration-300`}
               data-aos="zoom-in"
             >
-              <img src={image} alt={label} className="w-28 h-28" />
+              <img src={image} alt={label} className="w-28 h-28 mx-auto" />
               <h4 className="text-center mt-3 font-abc">{label}</h4>
             </div>
           ))}
