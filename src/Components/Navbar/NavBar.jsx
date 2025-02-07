@@ -47,7 +47,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {toggleMenu && (
-        <nav className="mobile-nav block md:hidden">
+        <nav className="mobile-nav block md:hidden z-50">
           <div className="flex flex-col text-white text-center border-none">
             <Link to="/" onClick={() => setToggleMenu(false)}>
               Home

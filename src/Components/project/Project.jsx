@@ -4,25 +4,16 @@ import AOS from "aos";
 
 // Import project images
 import pimg from "../../assets/pimg.png";
-import pimg1 from "../../assets/pimg1.png";
 
 const projects = [
   {
     image: pimg,
     title: "EB-Bill-Calculator",
-    tech: ["React", "Tailwind CSS", "Firebase"],
+    tech: ["React", "Tailwind CSS"],
     description:
       "This project is an interactive platform that helps users calculate their electricity bills and provides tips for reducing electricity consumption.",
     source: "https://github.com/Sridhar3145/EB-Bill-Calculator",
     demo: "https://eb-bill-calculator.netlify.app",
-  },
-  {
-    image: pimg1,
-    title: "Portfolio Website",
-    tech: ["React", "Tailwind CSS"],
-    description: "A modern personal portfolio website with animations.",
-    source: "https://github.com/Sridhar3145/Sridhar--Portfolio",
-    demo: "https://sridhar31-portfolio.netlify.app",
   },
 ];
 
@@ -30,56 +21,57 @@ const Projects = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section
-      className="text-white py-20 "
+      className="text-white py-20 flex flex-col items-center"
       style={{
-        backgroundImage: `url("../../assets/img2.png")`, // Background image similar to Home section
+        backgroundImage: `url("../../assets/img2.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12 font-head">
-          Projects
-        </h2>
+      <div className="mx-auto px-8 md:px-16 lg:px-24 text-center">
+        <h2 className="text-4xl font-bold mb-12 font-head">Projects</h2>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              onClick={() => setSelectedProject(project)}
-              className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg 
-             sm:hover:shadow-green-400 sm:hover:scale-105 transition duration-300"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
-              }}
-              whileTap={{
-                scale: 0.95,
-                boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
-              }}
-              data-aos="zoom-in"
-            >
-              {/* Project Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-60 object-cover border-2 border-gray-400 transition-transform duration-300"
-              />
+        {/* Centered Project Grid */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                onClick={() => setSelectedProject(project)}
+                className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg 
+                sm:hover:shadow-green-400 sm:hover:scale-105 transition duration-300"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
+                }}
+                whileTap={{
+                  scale: 0.95,
+                  boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
+                }}
+                data-aos="zoom-in"
+              >
+                {/* Project Image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-60 object-cover border-2 border-gray-400 transition-transform duration-300"
+                />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <h3 className="text-xl font-bold text-white">
-                  {project.title}
-                </h3>
-              </div>
-            </motion.div>
-          ))}
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <h3 className="text-xl font-bold text-white">
+                    {project.title}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
