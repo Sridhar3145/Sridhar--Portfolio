@@ -139,7 +139,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center  rounded-xl p-2 border-2 border-gray-400 transform transition-transform duration-300 hover:scale-105  hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:text-green-400 "
-              >
+                >
                 <FaWhatsapp size={28} className="icon" />
               </a>
             </div>

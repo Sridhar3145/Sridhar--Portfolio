@@ -4,6 +4,7 @@ import AOS from "aos";
 
 // Import project images
 import pimg from "../../assets/pimg.png";
+import pimg1 from "../../assets/pimg1.png";
 
 const projects = [
   {
@@ -14,6 +15,15 @@ const projects = [
       "This project is an interactive platform that helps users calculate their electricity bills and provides tips for reducing electricity consumption.",
     source: "https://github.com/Sridhar3145/EB-Bill-Calculator",
     demo: "https://eb-bill-calculator.netlify.app",
+  },
+  {
+    image: pimg1,
+    title: "Netflix-Clone",
+    tech: ["HTML", "CSS"],
+    description:
+      "The Netflix Clone Website is a front-end project built using HTML and CSS to replicate Netflix’s UI. It includes a hero section, navigation bar and a responsive layout. feature sections, and a footer for a realistic look. This project helps improve CSS skills, flexbox, and responsive design techniques.",
+    source: "https://github.com/Sridhar3145/Netflix-Clone",
+    demo: "https://clone-netfli.netlify.app",
   },
 ];
 
@@ -38,14 +48,14 @@ const Projects = () => {
         <h2 className="text-4xl font-bold mb-12 font-head">Projects</h2>
 
         {/* Centered Project Grid */}
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        <div className="w-full flex">
+          <div className="ml-60 w-full max-w-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 onClick={() => setSelectedProject(project)}
-                className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg 
-                sm:hover:shadow-green-400 sm:hover:scale-105 transition duration-300"
+                className="relative cursor-pointer group overflow-hidden rounded-lg shadow-lg 
+        sm:hover:shadow-green-400 sm:hover:scale-105 transition duration-300  w-full max-w-[400px]"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
