@@ -48,14 +48,14 @@ const Projects = () => {
         <h2 className="text-4xl font-bold mb-12 font-head">Projects</h2>
 
         {/* Centered Project Grid */}
-        <div className="w-full flex">
-          <div className="ml-60 w-full max-w-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 justify-between place-items-center">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 onClick={() => setSelectedProject(project)}
-                className="relative cursor-pointer group overflow-hidden rounded-lg shadow-lg 
-        sm:hover:shadow-green-400 sm:hover:scale-105 transition duration-300  w-full max-w-[400px]"
+                className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg 
+                sm:hover:shadow-green-400 sm:hover:scale-105 transition duration-300"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
