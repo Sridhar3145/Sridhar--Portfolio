@@ -15,13 +15,14 @@ const socialLinks = {
 
 const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   const [text] = useTypewriter({
     words: ["Front-End Developer.", "React Developer."],
-    loop: {},
+    loop: true,
   });
+
   return (
     <div className="text-white py-20 md:py-40 flex flex-col-reverse md:flex-row justify-center items-center px-6 md:px-14 gap-6 md:gap-28">
       {/* Text Section (Left) */}
@@ -41,11 +42,7 @@ const Home = () => {
           a{" "}
           <span className="font-abc">
             {text}
-            <Cursor
-              cursorBlinking={false}
-              cursorStyle="|"
-              cursorColor="green"
-            />
+            <Cursor cursorStyle="|" cursorColor="green" />
           </span>
         </h2>
         <p className="mt-4 text-gray-300 font-abc text-base">
@@ -57,16 +54,12 @@ const Home = () => {
           {/* Download Resume Button */}
           <a href="/assets/Resume.pdf" download="Resume.pdf">
             <motion.button
-              whileHover={{
-                border: "2px solid #99e6b7", // Border color on hover
-                scale: 1.1, // Scale effect on hover
-              }}
+              whileHover={{ border: "2px solid #99e6b7", scale: 1.1 }}
               transition={{ duration: 0.1 }}
               className="icon text-white px-6 py-3 border-2 border-gray-300 rounded-2xl font-abc hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] flex items-center gap-2 transition-all duration-300 mx-auto md:mx-0"
               data-aos="fade-right"
             >
-              <FaDownload size={20} /> {/* Download icon */}
-              Download CV
+              <FaDownload size={20} /> Download CV
             </motion.button>
           </a>
 
@@ -75,33 +68,27 @@ const Home = () => {
             className="flex gap-5 sm:flex-wrap justify-center md:justify-start"
             data-aos="fade-left"
           >
-            <a
-              href={socialLinks.whatsApp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center border-2 border-gray-300 rounded-xl p-2 hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:scale-110 transition-all duration-300"
-            >
-              <FaWhatsapp size={28} className="icon" />
-            </a>
-            <a
-              href={socialLinks.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center border-2 border-gray-300 rounded-xl p-2 hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:scale-110 transition-all duration-300"
-            >
-              <CiLinkedin size={32} className="icon" />
-            </a>
-            <a
-              href={socialLinks.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center border-2 border-gray-300 rounded-xl p-2 hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:scale-110 transition-all duration-300"
-            >
-              <FaGithub size={28} className="icon" />
-            </a>
+            {Object.entries(socialLinks).map(([key, link]) => (
+              <a
+                key={key}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center border-2 border-gray-300 rounded-xl p-2 hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:scale-110 transition-all duration-300"
+              >
+                {key === "whatsApp" && (
+                  <FaWhatsapp size={28} className="icon" />
+                )}
+                {key === "linkedIn" && (
+                  <CiLinkedin size={32} className="icon" />
+                )}
+                {key === "github" && <FaGithub size={28} className="icon" />}
+              </a>
+            ))}
           </div>
         </div>
       </div>
+
       {/* Image Section (Right) */}
       <div
         className="home__img"

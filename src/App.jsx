@@ -1,24 +1,27 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { Suspense } from "react";
+
 import NavBar from "./Components/Navbar/NavBar";
-import Home from "./Components/home/Home";
-import About from "./Components/about/About";
-import Skills from "./Components/skills/Skills";
-import Project from "./Components/project/Project";
-import Contact from "./Components/contact/Contact";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+const Home = React.lazy(() => import("./Components/home/Home"));
+const About = React.lazy(() => import("./Components/about/About"));
+const Skills = React.lazy(() => import("./Components/skills/Skills"));
+const Project = React.lazy(() => import("./Components/project/Project"));
+const Contact = React.lazy(() => import("./Components/contact/Contact"));
 
 function App() {
   return (
     <div>
       <Router>
         <NavBar />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Suspense fallback={<div>Loading....</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Suspense>
       </Router>
     </div>
   );

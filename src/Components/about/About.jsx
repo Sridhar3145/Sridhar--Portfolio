@@ -1,24 +1,21 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import about1 from "../../assets/about1.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaWhatsapp, FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 
+// Define social links outside the component to avoid re-creation
+const socialLinks = {
+  linkedIn: "https://www.linkedin.com/in/sridhar31",
+  whatsApp: "https://wa.me/9345866691",
+  github: "https://github.com/Sridhar3145",
+};
+
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
-    AOS.refresh(); // Refresh AOS on component mount
   }, []);
-
-  const socialLinks = useMemo(
-    () => ({
-      linkedIn: "https://www.linkedin.com/in/sridhar31",
-      whatsApp: "https://wa.me/9345866691",
-      github: "https://github.com/Sridhar3145",
-    }),
-    []
-  );
 
   return (
     <div className="text-white py-20" id="about">
@@ -32,9 +29,9 @@ const About = () => {
           <img
             src={about1}
             alt="Sridhar"
+            loading="lazy"
             className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-cover mb-8 md:mb-0"
             data-aos="fade-right"
-            data-aos-anchor-placement="top-bottom"
           />
 
           {/* About Text */}
@@ -72,64 +69,53 @@ const About = () => {
               <span className="text-green-400">Follow</span> me on
             </h1>
 
-            {/* For medium and larger screens, show with animation */}
+            {/* For medium and larger screens */}
             <div
               className="gap-5 mt-2 md:flex hidden justify-start"
               data-aos="fade-left"
-              data-aos-anchor-placement="top-bottom"
             >
-              <a
-                href={socialLinks.whatsApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-green-400 transition duration-300"
-              >
-                <FaWhatsapp size={35} />
-              </a>
-              <a
-                href={socialLinks.linkedIn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition duration-300"
-              >
-                <CiLinkedin size={40} />
-              </a>
-              <a
-                href={socialLinks.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400 transition duration-300"
-              >
-                <FaGithub size={35} />
-              </a>
+              {Object.entries(socialLinks).map(([key, link]) => (
+                <a
+                  key={key}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform duration-300"
+                >
+                  {key === "whatsApp" && (
+                    <FaWhatsapp size={35} className="text-green-400" />
+                  )}
+                  {key === "linkedIn" && (
+                    <CiLinkedin size={40} className="text-blue-400" />
+                  )}
+                  {key === "github" && (
+                    <FaGithub size={35} className="text-gray-400" />
+                  )}
+                </a>
+              ))}
             </div>
 
-            {/* For small screens, show without animation */}
+            {/* For small screens */}
             <div className="md:hidden flex gap-5 justify-center mt-4">
-              <a
-                href={socialLinks.whatsApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-green-400 transition duration-300"
-              >
-                <FaWhatsapp size={35} />
-              </a>
-              <a
-                href={socialLinks.linkedIn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition duration-300"
-              >
-                <CiLinkedin size={40} />
-              </a>
-              <a
-                href={socialLinks.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400 transition duration-300"
-              >
-                <FaGithub size={35} />
-              </a>
+              {Object.entries(socialLinks).map(([key, link]) => (
+                <a
+                  key={key}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform duration-300"
+                >
+                  {key === "whatsApp" && (
+                    <FaWhatsapp size={35} className="text-green-400" />
+                  )}
+                  {key === "linkedIn" && (
+                    <CiLinkedin size={40} className="text-blue-400" />
+                  )}
+                  {key === "github" && (
+                    <FaGithub size={35} className="text-gray-400" />
+                  )}
+                </a>
+              ))}
             </div>
           </div>
         </div>
