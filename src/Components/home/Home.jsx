@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import img2 from "../../assets/img2.png";
+import img2 from "../../assets/img2.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTypewriter, Cursor } from "react-simple-typewriter";

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 
 // Import project images
-import pimg from "../../assets/pimg.png";
-import pimg1 from "../../assets/pimg1.png";
+import pimg from "../../assets/pimg.webp";
+import pimg1 from "../../assets/pimg1.webp";
 
 const projects = [
   {

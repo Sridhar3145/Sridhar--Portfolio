@@ -3,12 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Import images for skills
-import html from "../../assets/html.png";
-import css3 from "../../assets/css3.svg";
-import js from "../../assets/js.png";
-import react from "../../assets/react.png";
-import twcss from "../../assets/twcss.png";
-import git from "../../assets/git.png";
+import html from "../../assets/html.webp";
+import css3 from "../../assets/css3.webp";
+import js from "../../assets/js.webp";
+import react from "../../assets/react.webp";
+import twcss from "../../assets/twcss.webp";
+import git from "../../assets/git.webp";
 
 const Skills = () => {
   // Initialize AOS for animations

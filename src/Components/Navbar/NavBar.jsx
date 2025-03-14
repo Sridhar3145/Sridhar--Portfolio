@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
-import logo7 from "../../assets/logo7.png";
+import logo7 from "../../assets/logo7.webp";
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
