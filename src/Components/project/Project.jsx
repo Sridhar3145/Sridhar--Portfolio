@@ -5,6 +5,7 @@ import AOS from "aos";
 // Import project images
 import pimg from "../../assets/pimg.webp";
 import pimg1 from "../../assets/pimg1.webp";
+import pimg3 from "../../assets/pimg3.webp";
 
 const projects = [
   {
@@ -24,6 +25,15 @@ const projects = [
       "The Netflix Clone Website is a front-end project built using HTML and CSS to replicate Netflix’s UI. It includes a hero section, navigation bar and a responsive layout. feature sections, and a footer for a realistic look. This project helps improve CSS skills, flexbox, and responsive design techniques.",
     source: "https://github.com/Sridhar3145/Netflix-Clone",
     demo: "https://clone-netfli.netlify.app",
+  },
+  {
+    image: pimg3,
+    title: "Todo-List",
+    tech: ["HTML", "CSS", "Javascript"],
+    description:
+      "A simple and interactive web application built with HTML, CSS, and JavaScript to help users organize their tasks. The app allows users to add, mark as completed, and delete tasks. It uses localStorage to persist tasks even after the page is reloaded, ensuring that users’ data is retained. The application is responsive, providing a seamless experience on both mobile and desktop devices.",
+    source: "https://github.com/Sridhar3145/Todo-List-App",
+    demo: " https://todo-list-appnet.netlify.app",
   },
 ];
 
