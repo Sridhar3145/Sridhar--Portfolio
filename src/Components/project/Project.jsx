@@ -6,6 +6,7 @@ import AOS from "aos";
 import pimg from "../../assets/pimg.webp";
 import pimg1 from "../../assets/pimg1.webp";
 import pimg3 from "../../assets/pimg3.webp";
+import pimg5 from "../../assets/pimg5.webp";
 
 const projects = [
   {
@@ -16,6 +17,16 @@ const projects = [
       "This project is an interactive platform that helps users calculate their electricity bills and provides tips for reducing electricity consumption.",
     source: "https://github.com/Sridhar3145/EB-Bill-Calculator",
     demo: "https://eb-bill-calculator.netlify.app",
+  },
+  {
+    image: pimg5,
+    title: "SarbathKart",
+    tech: ["React", "Tailwind CSS"],
+    description:
+      "Selvam Sarbath Shop is a user-friendly online store offering a variety of traditional sarbaths and fresh fruit juices. Customers can easily browse products, customize quantity, and place orders with ease — bringing the taste of our shop right to your fingertips.",
+
+    source: "https://github.com/Sridhar3145/SS-Shop-Website",
+    demo: "https://ss-shop-site.netlify.app",
   },
   {
     image: pimg1,
