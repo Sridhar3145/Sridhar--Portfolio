@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
-import logo7 from "../../assets/logo7.webp";
+import logo7 from "../assets/logo7.webp";
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="text-white px-8 py-2 flex md:justify-between md:items-center bg-primary shadow-lg shadow-gray-800 ">
+      <nav className="nav-box">
         {/* Logo */}
         <div className=" font-bold md:mx-0 font-title">
           <img src={logo7} alt="logo" className="w-17 h-10" />

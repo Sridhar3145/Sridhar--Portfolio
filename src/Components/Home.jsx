@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import img2 from "../../assets/img2.webp";
+import img2 from "../assets/img2.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -24,7 +24,7 @@ const Home = () => {
   });
 
   return (
-    <div className="text-white py-20 md:py-40 flex flex-col-reverse md:flex-row justify-center items-center px-6 md:px-14 gap-6 md:gap-28">
+    <div className="home-box">
       {/* Text Section (Left) */}
       <div
         data-aos="fade-up"
@@ -50,13 +50,13 @@ const Home = () => {
         </p>
 
         {/* Buttons and Social Icons */}
-        <div className="mt-20 flex flex-col sm:flex-row sm:flex-wrap md:flex-nowrap items-center md:justify-between gap-6 w-full">
+        <div className="cv-social-icon-main ">
           {/* Download Resume Button */}
           <a href="/assets/Resume.pdf" download="Resume.pdf">
             <motion.button
               whileHover={{ border: "2px solid #99e6b7", scale: 1.1 }}
               transition={{ duration: 0.1 }}
-              className="icon text-white px-6 py-3 border-2 border-gray-300 rounded-2xl font-abc hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] flex items-center gap-2 transition-all duration-300 mx-auto md:mx-0"
+              className="cv-download-btn"
               data-aos="fade-right"
             >
               <FaDownload size={20} /> Download CV
@@ -74,7 +74,7 @@ const Home = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center border-2 border-gray-300 rounded-xl p-2 hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:scale-110 transition-all duration-300"
+                className="social-icons-btn"
               >
                 {key === "whatsApp" && (
                   <FaWhatsapp size={28} className="icon" />

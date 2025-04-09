@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaWhatsapp, FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
-import about1 from "../../assets/about1.webp"; // Use WebP for optimized image
+import about1 from "../assets/about1.webp"; // Use WebP for optimized image
 
 // Social links
 const socialLinks = [
@@ -42,7 +42,7 @@ const About = () => {
             src={about1}
             alt="Sridhar - Front-End Developer"
             loading="lazy" // Lazy load applied
-            className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-cover mb-8 md:mb-0"
+            className="about-img"
             data-aos="fade-right"
           />
 

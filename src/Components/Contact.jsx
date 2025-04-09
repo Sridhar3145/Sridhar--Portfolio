@@ -130,7 +130,7 @@ const Contact = () => {
                 href={socialLinks.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center  rounded-xl p-2 border-2 border-gray-400 transform transition-transform duration-300 hover:scale-105  hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:text-green-400 "
+                className="flex items-center justify-center   social-submit-btns "
               >
                 <CiLinkedin size={32} className="icon" />
               </a>
@@ -138,8 +138,8 @@ const Contact = () => {
                 href={socialLinks.whatsApp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center  rounded-xl p-2 border-2 border-gray-400 transform transition-transform duration-300 hover:scale-105  hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:text-green-400 "
-                >
+                className="flex items-center justify-center   social-submit-btns "
+              >
                 <FaWhatsapp size={28} className="icon" />
               </a>
             </div>
@@ -159,7 +159,7 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-green-400"
+                className="form-input-class"
                 placeholder="Enter Your Name *"
               />
 
@@ -168,7 +168,7 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-green-400"
+                className="form-input-class"
                 placeholder="Enter Your Email *"
               />
 
@@ -177,7 +177,7 @@ const Contact = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-green-400"
+                className="form-input-class"
                 placeholder="Enter Subject *"
               />
 
@@ -185,14 +185,14 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-green-400"
+                className="form-input-class"
                 rows="5"
                 placeholder="Enter Your Message *"
               />
 
               <button
                 type="submit"
-                className="bg-gray-800 w-full text-white border-2 border-gray-400 transform transition-transform duration-300 hover:scale-105  hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:text-green-400  px-8 py-2 rounded-xl font-abc"
+                className="bg-gray-800 w-full text-white social-submit-btns  px-8  font-abc"
               >
                 Submit
               </button>

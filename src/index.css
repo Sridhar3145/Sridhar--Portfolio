@@ -128,3 +128,48 @@ border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 button:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/*Navbar*/
+
+@layer components {
+  .nav-box{
+    @apply text-white px-8 py-2 flex md:justify-between md:items-center bg-primary shadow-lg shadow-gray-800 
+  }
+
+
+  /*Home*/
+
+  .home-box{
+    @apply text-white py-20 md:py-40 flex flex-col-reverse md:flex-row justify-center items-center px-6 md:px-14 gap-6 md:gap-28
+  }
+
+  .cv-social-icon-main{
+   @apply mt-16 flex flex-col sm:flex-row sm:flex-wrap md:flex-nowrap items-center md:justify-between gap-6 w-full
+  }
+
+  .cv-download-btn{
+   @apply icon text-white px-6 py-3 border-2 border-gray-300 rounded-2xl font-abc hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] flex items-center gap-2 transition-all duration-300 mx-auto md:mx-0
+}
+
+  .social-icons-btn{
+   @apply flex items-center justify-center border-2 border-gray-300 rounded-xl p-2 hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:scale-110 transition-all duration-300
+}
+
+
+/*About*/
+
+.about-img{
+ @apply w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-cover mb-8 md:mb-0
+}
+
+/*Contact*/
+
+.form-input-class{
+  @apply w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-green-400
+}
+
+.social-submit-btns{
+  @apply   rounded-xl p-2 border-2 border-gray-400 transform transition-transform duration-300 hover:scale-105  hover:border-2 hover:border-green-400 hover:shadow-[0px_4px_15px_rgba(22,163,74,0.8)] hover:text-green-400
+}
+}

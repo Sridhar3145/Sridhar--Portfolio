@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import Home from "./Components/home/Home";
-import About from "./Components/about/About";
-import Skills from "./Components/skills/Skills";
-import Project from "./Components/project/Project";
-import Contact from "./Components/contact/Contact";
-import NavBar from "./Components/Navbar/NavBar";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Skills from "./Components/Skills";
+import Project from "./Components/Project";
+import Contact from "./Components/Contact";
+import NavBar from "./Components/NavBar";
 
 function App() {
   const [loading, setLoading] = useState(true);
