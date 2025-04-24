@@ -4,7 +4,6 @@ import AOS from "aos";
 
 // Import project images
 import pimg from "../assets/pimg.webp";
-import pimg1 from "../assets/pimg1.webp";
 import pimg3 from "../assets/pimg3.webp";
 import pimg5 from "../assets/pimg5.webp";
 
@@ -28,15 +27,7 @@ const projects = [
     source: "https://github.com/Sridhar3145/SS-Shop-Website",
     demo: "https://ss-shop-site.netlify.app",
   },
-  {
-    image: pimg1,
-    title: "Netflix-Clone",
-    tech: ["HTML", "CSS"],
-    description:
-      "The Netflix Clone Website is a front-end project built using HTML and CSS to replicate Netflix’s UI. It includes a hero section, navigation bar and a responsive layout. feature sections, and a footer for a realistic look. This project helps improve CSS skills, flexbox, and responsive design techniques.",
-    source: "https://github.com/Sridhar3145/Netflix-Clone",
-    demo: "https://clone-netfli.netlify.app",
-  },
+
   {
     image: pimg3,
     title: "Todo-List",
