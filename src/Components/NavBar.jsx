@@ -17,7 +17,7 @@ const NavBar = () => {
       <nav className="nav-box">
         {/* Logo */}
         <div className=" font-bold md:mx-0 font-title">
-          <img src={logo7} alt="logo" className="w-17 h-10" />
+          <img src={logo7} alt="logo" className="w-17 h-11" />
         </div>
 
         {/* Desktop Menu */}

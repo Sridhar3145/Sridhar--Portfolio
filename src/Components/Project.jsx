@@ -63,7 +63,7 @@ const Projects = () => {
 
   return (
     <section
-      className="text-white py-20 flex flex-col items-center"
+      className="text-white py-20 flex flex-col items-center mb-28"
       style={{
         backgroundImage: `url("../../assets/img2.png")`,
         backgroundSize: "cover",

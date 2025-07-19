@@ -78,9 +78,9 @@ const fragment = /* glsl */ `
 `;
 
 const Particles = ({
-  particleCount = 500,
-  particleSpread = 10,
-  speed = 0.1,
+  particleCount = 700,
+  particleSpread = 30,
+  speed = 0.4,
   particleColors,
   moveParticlesOnHover = true,
   particleHoverFactor = 1,
