@@ -8,10 +8,10 @@
 @tailwind utilities;
 
 .bg-primary {
-  background: rgb(11, 17, 30);
+  /* background: rgb(11, 17, 30); */
 }
 .bg-second {
-  background: rgb(11, 17, 30);
+  background: black;
 }
 
 .inner-box {
@@ -40,9 +40,13 @@
   transform: scale(1.1);
 }
 
-.mobile-nav {
-  @apply fixed top-10 left-0 bg-green-500 w-1/3 h-1/4;
+.form-cont {
+  @apply bg-gray-800  p-8 rounded-lg shadow-lg;
 }
+.mobile-nav {
+  @apply fixed top-10 left-0 w-1/3 h-1/4 rounded-xl backdrop-blur-md bg-black/80 text-white p-5;
+}
+
 .togglemenu {
   @apply border border-b-2 border-white w-full h-full mt-3;
 }
@@ -126,7 +130,7 @@ button:hover {
 
 @layer components {
   .nav-box {
-    @apply text-white px-8 py-2 flex md:justify-between md:items-center bg-primary shadow-lg shadow-gray-800;
+    @apply text-white px-8 py-2 flex md:justify-between md:items-center;
   }
 
   /*Home*/

@@ -82,14 +82,14 @@ const Projects = () => {
                 key={index}
                 onClick={() => setSelectedProject(project)}
                 className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg 
-                sm:hover:shadow-green-400 sm:hover:scale-105 transition duration-300"
+                sm:hover:shadow-gray-400 sm:hover:scale-105 transition duration-300"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
+                  boxShadow: "0px 4px 15px rgb(123,129,138)",
                 }}
                 whileTap={{
                   scale: 0.95,
-                  boxShadow: "0px 4px 15px rgba(74,222,128,0.8)",
+                  boxShadow: "0px 4px 15px rgb(123,129,138)",
                 }}
                 data-aos="zoom-in"
               >

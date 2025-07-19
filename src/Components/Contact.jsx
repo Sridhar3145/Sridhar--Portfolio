@@ -146,10 +146,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div
-            className="bg-gray-800 p-8 rounded-lg shadow-lg"
-            data-aos="fade-left"
-          >
+          <div className="form-cont" data-aos="fade-left">
             <h2 className="text-2xl font-semibold text-white mb-4">
               Send a Message
             </h2>
