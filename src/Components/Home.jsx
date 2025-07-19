@@ -1,25 +1,41 @@
 import React, { useEffect } from "react";
-import img2 from "../assets/img2.webp";
+import img3 from "../assets/img3.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaDownload, FaGithub } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const socialLinks = {
   linkedIn: "https://www.linkedin.com/in/sridhar31",
   whatsApp: "https://wa.me/9345866691",
   github: "https://github.com/Sridhar3145",
 };
-
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  useGSAP(() => {
+    gsap.fromTo(
+      ".icon",
+      {
+        rotate: 20,
+      },
+      {
+        rotate: -20,
+        repeat: -1,
+        yoyo: true,
+        duration: 4,
+      }
+    );
+  }, []);
+
   const [text] = useTypewriter({
-    words: ["Front-End Developer.", "React Developer."],
+    words: ["Front-End Developer.", "Reactjs-Developer."],
     loop: true,
   });
 
@@ -52,7 +68,10 @@ const Home = () => {
         {/* Buttons and Social Icons */}
         <div className="cv-social-icon-main ">
           {/* Download Resume Button */}
-          <a href="/assets/Resume.pdf" download="Resume.pdf">
+          <a
+            href="/assets/Sridhar-Front-End-Dev-Resume.pdf"
+            download="Resume.pdf"
+          >
             <motion.button
               whileHover={{ border: "2px solid #99e6b7", scale: 1.1 }}
               transition={{ duration: 0.1 }}
@@ -94,7 +113,7 @@ const Home = () => {
         className="home__img"
         data-aos="fade-left"
         style={{
-          backgroundImage: `url(${img2})`,
+          backgroundImage: `url(${img3})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

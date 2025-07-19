@@ -4,10 +4,45 @@ import AOS from "aos";
 
 // Import project images
 import pimg from "../assets/pimg.webp";
-import pimg3 from "../assets/pimg3.webp";
+import waimg from "../assets/waimg.webp";
 import pimg5 from "../assets/pimg5.webp";
 
 const projects = [
+  {
+    image: pimg5,
+    title: "SarbathKart",
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "React Router",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    description:
+      "SarbathKart is a full-stack e-commerce cart application for a local sarbath and juice shop. Users can browse products fetched from MongoDB, select quantities, and add items to the cart. The app includes user authentication  for login/signup, and protected routes for cart management. Built with React.js, Node.js, Express, and MongoDB for real-world project practice.",
+
+    source: "https://github.com/Sridhar3145/sarbath-kart-frontend",
+    demo: "https://sarbath-kart-pro.onrender.com/",
+  },
+  {
+    image: waimg,
+    title: "Weather Application",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "OpenWeather API",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Geolocation API",
+    ],
+    description:
+      "A full-stack weather application that allows users to search for real-time weather details of any city. The app stores search history in MongoDB, enabling users to view and manage their previous searches. It also uses the browser's Geolocation API to show the user's current weather. Built with Next.js frontend and Node.js + Express backend for real-world practice.",
+
+    source: "https://github.com/Sridhar3145/weather-application",
+    demo: "https://weather-application-sd.onrender.com/",
+  },
   {
     image: pimg,
     title: "EB-Bill-Calculator",
@@ -16,26 +51,6 @@ const projects = [
       "This project is an interactive platform that helps users calculate their electricity bills and provides tips for reducing electricity consumption.",
     source: "https://github.com/Sridhar3145/EB-Bill-Calculator",
     demo: "https://eb-bill-calculator.netlify.app",
-  },
-  {
-    image: pimg5,
-    title: "SarbathKart",
-    tech: ["React", "Tailwind CSS"],
-    description:
-      "Selvam Sarbath Shop is a user-friendly online store offering a variety of traditional sarbaths and fresh fruit juices. Customers can easily browse products, customize quantity, and place orders with ease — bringing the taste of our shop right to your fingertips.",
-
-    source: "https://github.com/Sridhar3145/SS-Shop-Website",
-    demo: "https://ss-shop-site.netlify.app",
-  },
-
-  {
-    image: pimg3,
-    title: "Todo-List",
-    tech: ["HTML", "CSS", "Javascript"],
-    description:
-      "A simple and interactive web application built with HTML, CSS, and JavaScript to help users organize their tasks. The app allows users to add, mark as completed, and delete tasks. It uses localStorage to persist tasks even after the page is reloaded, ensuring that users’ data is retained. The application is responsive, providing a seamless experience on both mobile and desktop devices.",
-    source: "https://github.com/Sridhar3145/Todo-List-App",
-    demo: " https://todo-list-appnet.netlify.app",
   },
 ];
 

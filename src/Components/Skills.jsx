@@ -9,15 +9,43 @@ import js from "../assets/js.webp";
 import react from "../assets/react.webp";
 import twcss from "../assets/twcss.webp";
 import git from "../assets/git.webp";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Skills = () => {
   // Initialize AOS for animations
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+  useGSAP(() => {
+    gsap.fromTo(
+      ".img",
+      {
+        rotate: 20,
+      },
+      {
+        rotate: -20,
+        repeat: -1,
+        yoyo: true,
+        duration: 4,
+      }
+    );
+  }, []);
 
   // Skill items data
   const skills = [
+    {
+      image: react,
+      label: "REACT JS",
+      borderColor: "border-sky-300",
+      shadowColor: "shadow-sky-300/75",
+    },
+    {
+      image: js,
+      label: "JAVASCRIPT",
+      borderColor: "border-yellow-500",
+      shadowColor: "shadow-yellow-500/75",
+    },
     {
       image: html,
       label: "HTML",
@@ -28,18 +56,6 @@ const Skills = () => {
       image: css3,
       label: "CSS",
       borderColor: "border-sky-600",
-      shadowColor: "shadow-sky-300/75",
-    },
-    {
-      image: js,
-      label: "JAVASCRIPT",
-      borderColor: "border-yellow-500",
-      shadowColor: "shadow-yellow-500/75",
-    },
-    {
-      image: react,
-      label: "REACT JS",
-      borderColor: "border-sky-300",
       shadowColor: "shadow-sky-300/75",
     },
     {
@@ -69,7 +85,7 @@ const Skills = () => {
               className={`mx-auto px-9 py-6 border-b-2 border-r-2 ${borderColor} shadow-lg ${shadowColor} rounded-md mt-9 hover:scale-105 transition-transform duration-300`}
               data-aos="zoom-in"
             >
-              <img src={image} alt={label} className="w-28 h-28 mx-auto" />
+              <img src={image} alt={label} className="w-20 h-20 mx-auto img" />
               <h4 className="text-center mt-3 font-abc">{label}</h4>
             </div>
           ))}

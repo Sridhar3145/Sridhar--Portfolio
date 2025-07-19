@@ -21,7 +21,7 @@ const NavBar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="space-x-6 hidden md:block">
+        <div className="space-x-6 justify-end hidden md:block">
           <Link to="/" className={linkClass}>
             <motion.span whileHover={{ scale: 2 }}>Home</motion.span>
           </Link>

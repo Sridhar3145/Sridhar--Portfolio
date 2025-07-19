@@ -80,7 +80,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="text-white py-20 bg-gray-900">
+    <div className="text-white py-20">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12 font-head">
           <span className="text-green-400">Contact </span>Me
