@@ -41,7 +41,6 @@ const Home = () => {
 
   return (
     <div className="home-box">
-      {/* Text Section (Left) */}
       <div
         data-aos="fade-up"
         className="text-center md:text-left flex flex-col items-center md:items-start"
@@ -65,12 +64,10 @@ const Home = () => {
           Specializing in Responsive, Interactive, and Modern Web Design.
         </p>
 
-        {/* Buttons and Social Icons */}
         <div className="cv-social-icon-main ">
-          {/* Download Resume Button */}
           <a
-            href="/assets/Sridhar-Front-End-Dev-Resume.pdf"
-            download="Resume.pdf"
+            href="/assets/Sridhar-S-Front-End-Developer-Resume.pdf"
+            download="frontend-Developer-Resume.pdf"
           >
             <motion.button
               whileHover={{ border: "2px solid #99e6b7", scale: 1.1 }}
@@ -81,8 +78,6 @@ const Home = () => {
               <FaDownload size={20} /> Download CV
             </motion.button>
           </a>
-
-          {/* Social Media Icons */}
           <div
             className="flex gap-5 sm:flex-wrap justify-center md:justify-start"
             data-aos="fade-left"
@@ -107,8 +102,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Image Section (Right) */}
       <div
         className="home__img"
         data-aos="fade-left"

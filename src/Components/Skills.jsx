@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// Import images for skills
 import html from "../assets/html.webp";
 import css3 from "../assets/css3.webp";
 import js from "../assets/js.webp";
@@ -13,10 +11,10 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Skills = () => {
-  // Initialize AOS for animations
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
   useGSAP(() => {
     gsap.fromTo(
       ".img",
@@ -32,7 +30,6 @@ const Skills = () => {
     );
   }, []);
 
-  // Skill items data
   const skills = [
     {
       image: react,

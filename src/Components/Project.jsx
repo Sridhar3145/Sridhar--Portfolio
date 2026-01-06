@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
-
-// Import project images
 import pimg from "../assets/pimg.webp";
-import waimg from "../assets/waimg.webp";
 import pimg5 from "../assets/pimg5.webp";
+import proimg1 from "../assets/proimg.png"
 
 const projects = [
   {
@@ -26,22 +24,17 @@ const projects = [
     demo: "https://sarbath-kart-pro.onrender.com/",
   },
   {
-    image: waimg,
-    title: "Weather Application",
+    image: proimg1,
+    title: "Local Service Booking",
     tech: [
-      "Next.js",
+      "React",
       "Tailwind CSS",
-      "OpenWeather API",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Geolocation API",
     ],
     description:
-      "A full-stack weather application that allows users to search for real-time weather details of any city. The app stores search history in MongoDB, enabling users to view and manage their previous searches. It also uses the browser's Geolocation API to show the user's current weather. Built with Next.js frontend and Node.js + Express backend for real-world practice.",
+      "A frontend-focused local services booking application that allows users to browse home services such as plumbing, electrician, AC repair, and appliance repair. Users can view service categories, check service details, select date and time slots, and place bookings. The app also includes a “My Bookings” section to view booked services. Built using React (Vite), Tailwind CSS, Material UI, and React Router with responsive UI and smooth animations.",
 
-    source: "https://github.com/Sridhar3145/weather-application",
-    demo: "https://weather-application-sd.onrender.com/",
+    source: "https://github.com/Sridhar3145/LSB/tree/main/Local-Services-Booking",
+    demo: "https://lsb5.vercel.app/",
   },
   {
     image: pimg,

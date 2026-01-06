@@ -86,9 +86,7 @@ const Contact = () => {
           <span className="text-green-400">Contact </span>Me
         </h2>
 
-        {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Left Side - Let's Talk */}
           <div
             className="flex flex-col sm:items-start items-center gap-6"
             data-aos="fade-right"
@@ -97,12 +95,9 @@ const Contact = () => {
               Let's Talk
             </h2>
 
-            {/* Contact Info */}
             <div className="flex flex-col gap-4 text-center sm:text-left">
-              {/* Phone */}
               <div className="flex items-center gap-3 justify-center sm:justify-start">
                 <FaPhone size={30} className="text-green-400" />{" "}
-                {/* Bigger icon */}
                 <a
                   href="tel:+91 9345866691"
                   className="text-lg font-medium text-gray-300"
@@ -110,11 +105,8 @@ const Contact = () => {
                   +91 9345866691
                 </a>
               </div>
-
-              {/* Email */}
               <div className="flex items-center gap-3 justify-center sm:justify-start">
                 <MdEmail size={30} className="text-green-400" />{" "}
-                {/* Bigger icon */}
                 <a
                   href="mailto:sridhar314507@gmail.com"
                   className="text-lg font-medium text-gray-300"
@@ -123,8 +115,6 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-
-            {/* Social Links */}
             <div className="flex gap-6 mt-4 justify-center sm:justify-start">
               <a
                 href={socialLinks.linkedIn}
@@ -145,7 +135,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Side - Contact Form */}
           <div className="form-cont" data-aos="fade-left">
             <h2 className="text-2xl font-semibold text-white mb-4">
               Send a Message

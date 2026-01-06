@@ -15,12 +15,10 @@ const NavBar = () => {
   return (
     <>
       <nav className="nav-box ">
-        {/* Logo */}
         <div className=" font-bold md:mx-0 font-title">
           <img src={logo7} alt="logo" className="w-17 h-11" />
         </div>
 
-        {/* Desktop Menu */}
         <div className="space-x-6 justify-end hidden md:block">
           <Link to="/" className={linkClass}>
             <motion.span whileHover={{ scale: 2 }}>Home</motion.span>
@@ -39,13 +37,11 @@ const NavBar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button className="block md:hidden ml-auto" onClick={handleClick}>
           <IoMenuSharp className="text-white h-12 w-6" />
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       {toggleMenu && (
         <nav className="mobile-nav block md:hidden z-50">
           <div className="flex flex-col text-white text-center border-none">

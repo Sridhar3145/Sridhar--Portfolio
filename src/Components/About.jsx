@@ -3,9 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaWhatsapp, FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
-import about1 from "../assets/about1.webp"; // Use WebP for optimized image
+import about1 from "../assets/about1.webp";
 
-// Social links
 const socialLinks = [
   {
     name: "LinkedIn",
@@ -37,16 +36,14 @@ const About = () => {
         </h2>
 
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          {/* Profile Image */}
           <img
             src={about1}
             alt="Sridhar - Front-End Developer"
-            loading="lazy" // Lazy load applied
+            loading="lazy"
             className="about-img"
             data-aos="fade-right"
           />
 
-          {/* About Text */}
           <div className="text-center md:text-left" data-aos="fade-left">
             <p className="text-lg leading-relaxed">
               I am a <strong>passionate Front-End Developer</strong> dedicated
@@ -76,12 +73,10 @@ const About = () => {
               high-quality results.
             </p>
 
-            {/* Social Links Section */}
             <h3 className="mt-8 text-2xl font-bold">
               <span className="text-green-400">Follow</span> me on
             </h3>
 
-            {/* Social Links */}
             <SocialLinks />
           </div>
         </div>
@@ -90,7 +85,6 @@ const About = () => {
   );
 };
 
-// Social Links Component
 const SocialLinks = () => (
   <div
     className="flex gap-5 mt-4 justify-center md:justify-start"

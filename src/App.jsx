@@ -22,7 +22,6 @@ function App() {
     <div
       style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
     >
-      {/* Background Particles */}
       <div
         style={{
           position: "fixed",
