@@ -66,7 +66,7 @@ const Home = () => {
 
         <div className="cv-social-icon-main ">
           <a
-            href="/assets/Sridhar-S-Front-End-Developer-Resume.pdf"
+            href="/assets/Sridhar_S_Front_End_Dev_Resume.pdf"
             download="frontend-Developer-Resume.pdf"
           >
             <motion.button
