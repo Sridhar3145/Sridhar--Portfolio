@@ -38,7 +38,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <img
             src={about1}
-            alt="Sridhar - Front-End Developer"
+            alt="Sridhar - MERN Stack Developer"
             loading="lazy"
             className="about-img"
             data-aos="fade-right"
@@ -46,31 +46,29 @@ const About = () => {
 
           <div className="text-center md:text-left" data-aos="fade-left">
             <p className="text-lg leading-relaxed">
-              I am a <strong>passionate Front-End Developer</strong> dedicated
-              to creating seamless and engaging web experiences. With expertise
-              in{" "}
-              <strong>HTML, CSS, JavaScript, React.js, and Tailwind CSS</strong>
-              , I develop dynamic and responsive web applications.
-            </p>
-
-            <p className="text-lg mt-4">
-              Skilled in building <strong>user-friendly interfaces</strong> with
-              a focus on <strong>pixel-perfect design</strong> and{" "}
-              <strong>optimized web performance</strong>.
-            </p>
-
-            <p className="text-lg mt-4">
-              Enthusiastic about{" "}
+              I am a <strong>passionate MERN Stack Developer</strong> focused on building
+              scalable and high-performance web applications with modern technologies.
+              I specialize in{" "}
               <strong>
-                staying updated with the latest web development trends
-              </strong>
-              and transforming creative ideas into functional solutions.
+                MongoDB, Express.js, React.js, Node.js, JavaScript, and Tailwind CSS
+              </strong>.
             </p>
 
             <p className="text-lg mt-4">
-              Strong ability to work <strong>independently</strong> or
-              collaborate in a <strong>team environment</strong> to deliver
-              high-quality results.
+              Experienced in developing <strong>full-stack applications</strong> with
+              RESTful APIs, secure authentication, and efficient database management.
+            </p>
+
+            <p className="text-lg mt-4">
+              Strong in creating <strong>responsive user interfaces</strong> and
+              integrating them seamlessly with <strong>backend services</strong> for
+              smooth user experiences.
+            </p>
+
+            <p className="text-lg mt-4">
+              Passionate about <strong>problem-solving</strong>, writing clean and
+              maintainable code, and continuously learning new technologies to improve
+              application performance and scalability.
             </p>
 
             <h3 className="mt-8 text-2xl font-bold">
@@ -80,6 +78,7 @@ const About = () => {
             <SocialLinks />
           </div>
         </div>
+
       </div>
     </section>
   );

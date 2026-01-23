@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import pimg from "../assets/pimg.webp";
-import pimg5 from "../assets/pimg5.webp";
+import pimg6 from "../assets/pimg6.webp";
 import proimg1 from "../assets/proimg.png"
 
 const projects = [
   {
-    image: pimg5,
+    image: pimg6,
     title: "SarbathKart",
     tech: [
       "React.js",

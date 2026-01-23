@@ -6,6 +6,9 @@ import css3 from "../assets/css3.webp";
 import js from "../assets/js.webp";
 import react from "../assets/react.webp";
 import twcss from "../assets/twcss.webp";
+import node from "../assets/node.webp";
+import express from "../assets/express.webp";
+import mongo from "../assets/mongo.webp";
 import git from "../assets/git.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -42,6 +45,24 @@ const Skills = () => {
       label: "JAVASCRIPT",
       borderColor: "border-yellow-500",
       shadowColor: "shadow-yellow-500/75",
+    },
+    {
+      image: node,
+      label: "NODE JS",
+      borderColor: "border-green-800",
+      shadowColor: "shadow-green-800/75",
+    },
+    {
+      image: express,
+      label: "EXPRESS JS",
+      borderColor: "border-gray-500",
+      shadowColor: "shadow-gray-500/75",
+    },
+    {
+      image: mongo,
+      label: "MONGODB",
+      borderColor: "border-green-400",
+      shadowColor: "shadow-green-400/75",
     },
     {
       image: html,
