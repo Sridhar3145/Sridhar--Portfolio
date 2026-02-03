@@ -66,8 +66,8 @@ const Home = () => {
 
         <div className="cv-social-icon-main ">
           <a
-            href="/assets/Sridhar_S_Full_Stack_Developer_MERN.pdf"
-            download="MERN_Stack_Developer-Resume.pdf"
+            href="/assets/Sridhar_S_Front_End_Dev_Resume.pdf"
+            download="Front_End_Developer-Resume.pdf"
           >
             <motion.button
               whileHover={{ border: "2px solid #99e6b7", scale: 1.1 }}
