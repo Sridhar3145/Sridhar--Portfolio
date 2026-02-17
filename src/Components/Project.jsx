@@ -4,8 +4,26 @@ import AOS from "aos";
 import pimg from "../assets/pimg.webp";
 import pimg6 from "../assets/pimg6.webp";
 import proimg1 from "../assets/proimg.png"
+import proimg7 from "../assets/proimg7.png"
 
 const projects = [
+  {
+    image: proimg7,
+    title: "BlogStack",
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "React Router",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    description:
+      "BlogStack is a full-stack MERN blogging platform with an integrated admin approval workflow. Users can register, log in, create blogs, and manage their content, while administrators can review, approve, or reject submissions with feedback. The system implements JWT-based authentication, role-based authorization, protected routes, and a dynamic pending approval notification system.",
+
+    source: "https://github.com/Sridhar3145/blogstack-frontend",
+    demo: "https://blogstack-frontend.onrender.com/",
+  },
   {
     image: pimg6,
     title: "SarbathKart",
